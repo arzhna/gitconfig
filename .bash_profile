@@ -3,6 +3,7 @@ source ~/.git-prompt.sh
 
 PS1='\h:\w$(__git_ps1)\$ '
 #PS1="\[$BLUE\]\h:\[$YELLOW\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$WHITE\]\$ "
+#PS1=' \[\033[35m\]@\h \[\033[33m\]\w\[\033[32m\]$(__git_ps1)\[\033[36m\]$ \[\033[m\]'
 
 # Enabling directory and file color highlighting
 export CLICOLOR=1
