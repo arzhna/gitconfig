@@ -1,13 +1,18 @@
 # Load .git-prompt.sh
 source ~/.git-prompt.sh
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
 
-PS1='\h:\w$(__git_ps1)\$ '
-#PS1="\[$BLUE\]\h:\[$YELLOW\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$WHITE\]\$ "
-#PS1=' \[\033[35m\]@\h \[\033[33m\]\w\[\033[32m\]$(__git_ps1)\[\033[36m\]$ \[\033[m\]'
-
-# Enabling directory and file color highlighting
+# export
+export TERM=xterm-color
 export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
+export LSCOLORS=GxFxCxDxBxegedabagaced
+export GREP_OPTIONS='--color=auto'
+export PS1=' \[\033[35m\]\u@\h \[\033[33m\]\w\[\033[32m\]$(__git_ps1)\[\033[36m\]$ \[\033[m\]'
+export PATH=$PATH:/Applications/autotools/bin:/Users/arzhna/Library/Android/sdk/platform-tools:/Users/arzhna/dev/scripts
+export MANPATH=$MANPATH:/Applications/autotools/share
+export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/Applications/autotools/lib
 
 #alias
 alias py="python3"
